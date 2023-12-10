@@ -1,0 +1,88 @@
+
+g	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8»ŒŒÅ1
+g	java:S112e"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8‘»ŒŒÅ1
+g	java:S112~"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8‘»ŒŒÅ1
+h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8‘»ŒŒÅ1
+h	java:S112˜"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8‘»ŒŒÅ1
+h
+java:S1192P"KDefine a constant instead of duplicating this literal "Sospechoso" 5 times.(Ç«îì8–»ŒŒÅ1
+w
+java:S1192L"ZDefine a constant instead of duplicating this literal "InvestigacionTieneTestigo" 5 times.(ó•í€8–»ŒŒÅ1
+k
+java:S1192K"NDefine a constant instead of duplicating this literal "Investigacion" 5 times.(Œ•È8–»ŒŒÅ1
+r
+java:S1192G"PDefine a constant instead of duplicating this literal "CategoriaCrimen" 5 times.(Âş£Äûÿÿÿÿ8–»ŒŒÅ1
+i
+java:S1192H"GDefine a constant instead of duplicating this literal "Crimen" 5 times.(Ãú„øÿÿÿÿ8–»ŒŒÅ1
+m
+java:S1192M"PDefine a constant instead of duplicating this literal "OrdenDeBusqueda" 5 times.(¹‚õ8–»ŒŒÅ1
+c
+java:S1192O"FDefine a constant instead of duplicating this literal "Rango" 5 times.(¬ïé8–»ŒŒÅ1
+s
+java:S1192Q"VDefine a constant instead of duplicating this literal "SospechosoTieneCrimen" 5 times.(ÿÓˆì8–»ŒŒÅ1
+i
+java:S1192F"GDefine a constant instead of duplicating this literal "Agente" 5 times.(¾›Ã“ùÿÿÿÿ8–»ŒŒÅ1
+x
+java:S1192Ë"UDefine a constant instead of duplicating this literal "Entidad no vÃ¡lida: " 3 times.(·û©âùÿÿÿÿ8–»ŒŒÅ1
+o
+java:S1192I"MDefine a constant instead of duplicating this literal "Departamento" 5 times.(È¢Ş«ùÿÿÿÿ8–»ŒŒÅ1
+e
+java:S1192R"HDefine a constant instead of duplicating this literal "Testigo" 5 times.(ë²ªÉ8–»ŒŒÅ1
+i
+java:S1192N"GDefine a constant instead of duplicating this literal "Prueba" 5 times.(ä“ÎÒüÿÿÿÿ8–»ŒŒÅ1
+d
+java:S1192J"GDefine a constant instead of duplicating this literal "Equipo" 5 times.(¯‰·¹8–»ŒŒÅ1
+J
+java:S1604["(Make this anonymous inner class a lambda(ßóÅÿÿÿÿÿ8—»ŒŒÅ1
+J
+java:S1604w"(Make this anonymous inner class a lambda(ÕÔ£şúÿÿÿÿ8—»ŒŒÅ1
+F
+java:S1604ƒ"(Make this anonymous inner class a lambda(–Ø‰8—»ŒŒÅ1
+K
+java:S1604’"(Make this anonymous inner class a lambda(ûøàÌıÿÿÿÿ8—»ŒŒÅ1
+M
+java:S1948"+Make "agenteDao" transient or serializable.(”ù…ªøÿÿÿÿ8È»ŒŒÅ1
+V
+java:S1948"4Make "categoriaCrimenDao" transient or serializable.(¥§Ê‚üÿÿÿÿ8È»ŒŒÅ1
+M
+java:S1948"+Make "crimenDao" transient or serializable.(¨æôŞıÿÿÿÿ8È»ŒŒÅ1
+S
+java:S1948"1Make "departamentoDao" transient or serializable.(ÙÔ›Àıÿÿÿÿ8È»ŒŒÅ1
+H
+java:S1948"+Make "equipoDao" transient or serializable.(íÁù8È»ŒŒÅ1
+T
+java:S1948"2Make "investigacionDao" transient or serializable.(ãÖäÌûÿÿÿÿ8È»ŒŒÅ1
+[
+java:S1948">Make "investigacionTieneTestigoDao" transient or serializable.(ÄŒœÚ8È»ŒŒÅ1
+Q
+java:S1948"4Make "ordenDeBusquedaDao" transient or serializable.(·£„Á8È»ŒŒÅ1
+G
+java:S1948"+Make "pruebaDao" transient or serializable.(¥üx8È»ŒŒÅ1
+L
+java:S1948 "*Make "rangoDao" transient or serializable.(™‰¯Ìşÿÿÿÿ8È»ŒŒÅ1
+L
+java:S1948!"/Make "sospechosoDao" transient or serializable.(ãæ¶ÿ8È»ŒŒÅ1
+\
+java:S1948"":Make "sospechosoTieneCrimenDao" transient or serializable.(Äµ“Ğşÿÿÿÿ8È»ŒŒÅ1
+I
+java:S1948#",Make "testigoDao" transient or serializable.(ÓÅ­‰8È»ŒŒÅ1
+J
+java:S1481&"(Remove this unused "ref" local variable.(Ê¯¡úÿÿÿÿ8Ë»ŒŒÅ1
+k
+java:S32528"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Õû»öşÿÿÿÿ8Í»ŒŒÅ1
+^
+java:S1854^"ARemove this useless assignment to local variable "selectedTable".(ç“Œ×8Ô»ŒŒÅ1
+O
+java:S1481^"2Remove this unused "selectedTable" local variable.(ç“Œ×8Ö»ŒŒÅ1
+G	java:S106z"+Replace this use of System.out by a logger.(¯™Ñ¸8Ø»ŒŒÅ1
+M	java:S106Ğ"+Replace this use of System.out by a logger.(şØ”ôşÿÿÿÿ8Ş»ŒŒÅ1
+H	java:S106Ö"+Replace this use of System.out by a logger.(®±Ÿ™8ß»ŒŒÅ1
+H	java:S106Ù"+Replace this use of System.out by a logger.(ğÆ¾§8ß»ŒŒÅ1
+M	java:S106Í"+Replace this use of System.out by a logger.(Ó´šªùÿÿÿÿ8è»ŒŒÅ1
+>	java:S131Î""Add a default case to this switch.(ı¢N8¿Ì³ŒÅ1
+L
+java:S1068"/Remove this unused "btnInsertar" private field.(»•Ö‹8ñ»ŒŒÅ1
+N
+java:S1068"1Remove this unused "btnActualizar" private field.(ì¿ôÏ8ñ»ŒŒÅ1
+L
+java:S1068"/Remove this unused "btnEliminar" private field.(Û©8ñ»ŒŒÅ1

@@ -1,0 +1,8 @@
+
+b	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(ˆé¦¬8ş÷¢Á‘1
+b	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(ÇªÒ¼8€ø¢Á‘1
+b	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(³Éä®8€ø¢Á‘1
+l
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(êÍªÎ8Ë€ğÅ1
+l
+java:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¼Ú­í8õù¢Á‘1

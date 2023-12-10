@@ -1,0 +1,16 @@
+
+u
+java:S1488B"ZImmediately return this expression instead of assigning it to the temporary variable "nb".(‹¶ªäúÿÿÿÿ
+]
+java:S2095L"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜Øœ‹
+]
+java:S2095,"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡­ÖŸ
+]
+java:S2095A"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜Øœ‹
+]
+java:S20957"GUse try-with-resources or close this "Statement" in a "finally" clause.(¡­ÖŸ
+´
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ñÙÐúýÿÿÿÿ
+H
+java:S4925 "-Remove this "Class.forName()", it is useless.(õ†¨Äùÿÿÿÿ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(æ„»ôøÿÿÿÿ
