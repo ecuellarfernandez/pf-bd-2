@@ -10,7 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 
 public class Rango {
-    private String id;
+    private int id;
     private String nombre;
 
     @Override

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Equipo {
-    private String id;
+    private int id;
     private String nombre;
 
     @Override

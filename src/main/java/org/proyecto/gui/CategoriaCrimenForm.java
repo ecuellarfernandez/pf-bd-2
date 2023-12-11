@@ -21,7 +21,7 @@ public class CategoriaCrimenForm extends JDialog {
 
         // Crear los componentes del formulario
         JLabel labelIdCategoria = new JLabel("ID Categoría:");
-        JLabel labelNombre = new JLabel("Nombre:");
+        JLabel labelNombre = new JLabel("Descripcion:");
 
         textFieldNombre = new JTextField(20);
 
@@ -82,7 +82,7 @@ public class CategoriaCrimenForm extends JDialog {
     }
 
     private void llenarFormulario() {
-        textFieldNombre.setText(categoriaCrimen.getNombre());
+        textFieldNombre.setText(categoriaCrimen.getDescripcion());
     }
 
     private void guardarCategoriaCrimen() throws Exception {
@@ -90,7 +90,7 @@ public class CategoriaCrimenForm extends JDialog {
 
         // Crear un objeto CategoriaCrimen con los datos del formulario
         CategoriaCrimen nuevaCategoriaCrimen = new CategoriaCrimen();
-        nuevaCategoriaCrimen.setNombre(nombre);
+        nuevaCategoriaCrimen.setDescripcion(nombre);
 
         if(categoriaCrimen != null){
             nuevaCategoriaCrimen.setId(categoriaCrimen.getId());

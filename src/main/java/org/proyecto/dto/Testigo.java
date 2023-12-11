@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class Testigo {
-    private String id;
-    private String ciTestigo;
+    private int id;
+    private int ciTestigo;
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;

@@ -8,37 +8,37 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class CategoriaDaoMySql extends CategoriaCrimenDao {
-    private static final String PROCEDURE_INSERT = "CALL insertar_categoria_crimen(?, ?)";
-    private static final String INSERT_QUERY = "INSERT INTO categoria_crimen (nombre) VALUES (?)";
-    private static final String UPDATE_QUERY = "UPDATE categoria_crimen SET nombre = ? WHERE idCategoria = ?";
+    private static final String INSERT_PROCEDURE = "CALL insertar_categoria_crimen(?)";
+    private static final String INSERT_QUERY = "INSERT INTO categoria_crimen (descripcion) VALUES (?)";
+    private static final String UPDATE_QUERY = "UPDATE categoria_crimen SET descripcion = ? WHERE idCategoria = ?";
     private static final String DELETE_QUERY = "DELETE FROM categoria_crimen WHERE idCategoria = ?";
     private static final String SELECT_QUERY = "SELECT * FROM categoria_crimen WHERE idCategoria = ?";
     private static final String SELECT_ALL_QUERY = "SELECT * FROM categoria_crimen";
 
-    @Override
-    public void pro_insert(CategoriaCrimen obj) throws Exception {
-        try {
-            Conexion objConexion = Conexion.getOrCreate();
-            Connection conn = objConexion.conectarPostgreSQL();
-            CallableStatement stmt = conn.prepareCall(PROCEDURE_INSERT);
-            stmt.setString(1, obj.getId());
-            stmt.setString(2, obj.getNombre());
-
-            stmt.executeUpdate();
-            stmt.close();
-            objConexion.desconectar();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            throw new Exception("Error al insertar la categoria en la base de datos");
-        }
-    }
+//    @Override
+//    public void pro_insert(CategoriaCrimen obj) throws Exception {
+//        try {
+//            Conexion objConexion = Conexion.getOrCreate();
+//            Connection conn = objConexion.conectarPostgreSQL();
+//            CallableStatement stmt = conn.prepareCall(PROCEDURE_INSERT);
+//            stmt.setString(1, obj.getId());
+//            stmt.setString(2, obj.getDescripcion());
+//
+//            stmt.executeUpdate();
+//            stmt.close();
+//            objConexion.desconectar();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//            throw new Exception("Error al insertar la categoria en la base de datos");
+//        }
+//    }
 
     @Override
     public void insert(CategoriaCrimen obj) throws Exception {
         try {
             Conexion objConexion = Conexion.getOrCreate();
             Connection conn = objConexion.conectarPostgreSQL();
-            PreparedStatement stmt = conn.prepareStatement(INSERT_QUERY);
+            PreparedStatement stmt = conn.prepareStatement(INSERT_PROCEDURE);
             stmt.setString(1, obj.getNombre());
 
             stmt.executeUpdate();
@@ -56,7 +56,7 @@ public class CategoriaDaoMySql extends CategoriaCrimenDao {
             Conexion objConexion = Conexion.getOrCreate();
             Connection conn = objConexion.conectarPostgreSQL();
             PreparedStatement stmt = conn.prepareStatement(UPDATE_QUERY);
-            stmt.setString(2, obj.getId());
+            stmt.setInt(2, obj.getId());
             stmt.setString(1, obj.getNombre());
 
             stmt.executeUpdate();
@@ -69,13 +69,13 @@ public class CategoriaDaoMySql extends CategoriaCrimenDao {
     }
 
     @Override
-    public void delete(String id) throws Exception {
+    public void delete(int id) throws Exception {
         PreparedStatement statement = null;
         Conexion objConexion = Conexion.getOrCreate();
         Connection conn = objConexion.conectarPostgreSQL();
         try {
             statement = conn.prepareStatement(DELETE_QUERY);
-            statement.setString(1, id);
+            statement.setInt(1, id);
             statement.executeUpdate();
         } finally {
             closeResources(statement, null);
@@ -123,7 +123,7 @@ public class CategoriaDaoMySql extends CategoriaCrimenDao {
 
     private CategoriaCrimen createCategoriaFromResultSet(ResultSet resultSet) throws SQLException {
         CategoriaCrimen categoriaCrimen = new CategoriaCrimen();
-        categoriaCrimen.setId(resultSet.getString("idCategoria"));
+        categoriaCrimen.setId(resultSet.getInt("idCategoria"));
         categoriaCrimen.setNombre(resultSet.getString("nombre"));
         return categoriaCrimen;
     }

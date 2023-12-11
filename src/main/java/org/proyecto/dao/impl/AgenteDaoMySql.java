@@ -11,7 +11,7 @@ public class AgenteDaoMySql extends AgenteDao {
     private static final String view_Ocupado = "Select * from agentes_ocupados";
     private static final String view_Disponible = "Select * from agentes_disponibles";
     private static final String INSERT_PROCEDURE = "CALL insert_agente_p(?,?,?,?,?,?,?)";
-//    private static final String INSERT_QUERY = "INSERT INTO agente (nombre, apellidoPaterno, apellidoMaterno, idDepartamento,idRango, idEquipo ) VALUES (?, ?, ? ,? ,?, ?)";
+    private static final String INSERT_QUERY = "INSERT INTO agente (nombre, apellidoPaterno, apellidoMaterno, idDepartamento,idRango, idEquipo ) VALUES (?, ?, ? ,? ,?, ?)";
     private static final String UPDATE_QUERY = "UPDATE agente SET nombre=?, apellidoPaterno=?, apellidoMaterno=?, idDepartamento=?, idRango=?, idEquipo=? WHERE idAgente=?";
     private static final String DELETE_QUERY = "DELETE FROM agente WHERE ci = ?";
     private static final String SELECT_QUERY = "SELECT * FROM agente WHERE ci = ?";
@@ -44,18 +44,43 @@ public class AgenteDaoMySql extends AgenteDao {
     @Override
     public void insert(Agente obj) throws Exception {
         PreparedStatement stmt = null;
+        int id = 0;
         try {
             Conexion objConexion = Conexion.getOrCreate();
             Connection conn = objConexion.conectarPostgreSQL();
-            stmt = conn.prepareStatement(INSERT_PROCEDURE);
+            stmt = conn.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS);
             stmt.setString(1, obj.getNombre());
             stmt.setString(2, obj.getApellidoPaterno());
             stmt.setString(3, obj.getApellidoMaterno());
-            stmt.setString(4, obj.getNombreUsuario());
-            stmt.setString(5, obj.getIdEquipo());
-            stmt.setString(6, obj.getIdRango());
-            stmt.setString(7, obj.getIdDepartamento());
+
+            int idDepartamento = obj.getIdDepartamento();
+            int idRango = obj.getIdRango();
+            int idEquipo = obj.getIdEquipo();
+
+            if (idDepartamento > 0) {
+                stmt.setInt(4, idDepartamento);
+            } else {
+                stmt.setNull(4, java.sql.Types.INTEGER);
+            }
+
+            if (idRango > 0) {
+                stmt.setInt(5, idRango);
+            } else {
+                throw new Exception("Se requiere proporcionar un rango válido para crear un agente.");
+            }
+
+            if (idEquipo > 0) {
+                stmt.setInt(6, idEquipo);
+            } else {
+                stmt.setNull(6, java.sql.Types.INTEGER);
+            }
+
             stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            if(rs.next()){
+                id = rs.getInt(1);
+                obj.setCi(id);
+            }
 
             objConexion.desconectar();
         } catch (SQLException e) {
@@ -77,29 +102,28 @@ public class AgenteDaoMySql extends AgenteDao {
             stmt.setString(1, obj.getNombre());
             stmt.setString(2, obj.getApellidoPaterno());
             stmt.setString(3, obj.getApellidoMaterno());
-            stmt.setString(4, obj.getIdDepartamento());
-            String idDepartamento = obj.getIdDepartamento();
-            String idRango = obj.getIdRango();
-            String idEquipo = obj.getIdEquipo();
+            stmt.setInt(4, obj.getIdDepartamento());
+            int idDepartamento = obj.getIdDepartamento();
+            int idRango = obj.getIdRango();
+            int idEquipo = obj.getIdEquipo();
 
-
-            if(idDepartamento.length() > 0){
-                stmt.setString(4, idDepartamento);
+            if(idDepartamento > 0){
+                stmt.setInt(4, idDepartamento);
             }else {
-                stmt.setNull(4, Types.VARCHAR);
+                stmt.setNull(4, java.sql.Types.INTEGER);
             }
-            if(idRango.length() > 0){
-                stmt.setString(5, idRango);
+            if(idRango > 0){
+                stmt.setInt(5, idRango);
             }else {
                 throw new Exception("Se requiere proporcionar un rango válido para crear un agente.");
             }
-            if(idEquipo.length() > 0){
-                stmt.setString(6, idEquipo);
+            if(idEquipo > 0){
+                stmt.setInt(6, idEquipo);
             }else {
-                stmt.setNull(6, Types.VARCHAR);
+                stmt.setNull(6, java.sql.Types.INTEGER);
             }
 
-            stmt.setString(7, obj.getCi());
+            stmt.setInt(7, obj.getCi());
             stmt.executeUpdate();
             stmt.close();
             objConexion.desconectar();
@@ -110,12 +134,12 @@ public class AgenteDaoMySql extends AgenteDao {
     }
 
     @Override
-    public void delete(String id) throws Exception {
+    public void delete(int id) throws Exception {
         try {
             Conexion objConexion = Conexion.getOrCreate();
             Connection conn = objConexion.conectarPostgreSQL();
             PreparedStatement stmt = conn.prepareStatement(DELETE_QUERY);
-            stmt.setString(1, id);
+            stmt.setInt(1, id);
             stmt.executeUpdate();
             stmt.close();
             objConexion.desconectar();
@@ -126,27 +150,25 @@ public class AgenteDaoMySql extends AgenteDao {
     }
 
     @Override
-    public Agente get(String id) throws Exception {
+    public Agente get(int id) throws Exception {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try {
             Conexion objConexion = Conexion.getOrCreate();
             Connection conn = objConexion.conectarPostgreSQL();
             stmt = conn.prepareStatement(SELECT_QUERY);
-            stmt.setString(1, id);
+            stmt.setInt(1, id);
             rs = stmt.executeQuery();
             System.out.println("AAAAAAAAAAAAAaa" + stmt);
             if (rs.next()) {
                 Agente agente = new Agente();
-                agente.setCi(rs.getString("ci"));
+                agente.setCi(rs.getInt("ci"));
                 agente.setNombre(rs.getString("nombre"));
                 agente.setApellidoPaterno(rs.getString("apellidoPaterno"));
                 agente.setApellidoMaterno(rs.getString("apellidoMaterno"));
-                agente.setNombreUsuario(rs.getString("nombreUsuario"));
-                agente.setIdDepartamento(rs.getString("idDepartamento"));
-                agente.setIdRango(rs.getString("idRango"));
-                agente.setIdEquipo(rs.getString("idEquipo"));
-                agente.setEstado(rs.getString("estado"));
+                agente.setIdDepartamento(rs.getInt("idDepartamento"));
+                agente.setIdRango(rs.getInt("idRango"));
+                agente.setIdEquipo(rs.getInt("idEquipo"));
                 rs.close();
                 stmt.close();
                 objConexion.desconectar();
@@ -243,15 +265,13 @@ public class AgenteDaoMySql extends AgenteDao {
 
     private Agente createAgenteFromResultSet(ResultSet resultSet) throws Exception {
         Agente agente = new Agente();
-        agente.setCi(resultSet.getString("ci"));
+        agente.setCi(resultSet.getInt("ci"));
         agente.setNombre(resultSet.getString("nombre"));
         agente.setApellidoPaterno(resultSet.getString("apellidoPaterno"));
         agente.setApellidoMaterno(resultSet.getString("apellidoMaterno"));
-        agente.setNombreUsuario(resultSet.getString("nombreUsuario"));
-        agente.setIdRango(resultSet.getString("idRango"));
-        agente.setIdEquipo(resultSet.getString("idEquipo"));
-        agente.setIdDepartamento(resultSet.getString("idDepartamento"));
-        agente.setEstado(resultSet.getString("estado"));
+        agente.setIdRango(resultSet.getInt("idRango"));
+        agente.setIdEquipo(resultSet.getInt("idEquipo"));
+        agente.setIdDepartamento(resultSet.getInt("idDepartamento"));
 
         return agente;
     }

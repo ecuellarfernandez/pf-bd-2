@@ -1,20 +1,20 @@
 
-b	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(şáêœ8À‘ù‡Å1
-b	java:S112^"FDefine and throw a dedicated exception instead of using a generic one.(ßıñ8À‘ù‡Å1
-g	java:S112l"FDefine and throw a dedicated exception instead of using a generic one.(Ç ˜¨øÿÿÿÿ8À‘ù‡Å1
-b	java:S112|"FDefine and throw a dedicated exception instead of using a generic one.(Ö’—á8À‘ù‡Å1
-c	java:S112œ"FDefine and throw a dedicated exception instead of using a generic one.(¾àéÅ8À‘ù‡Å1
-h	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(§¶»¤ÿÿÿÿÿ8À‘ù‡Å1
-h	java:S112º"FDefine and throw a dedicated exception instead of using a generic one.(©Æõ–ùÿÿÿÿ8À‘ù‡Å1
-h	java:S112Ô"FDefine and throw a dedicated exception instead of using a generic one.(™µ’‘ùÿÿÿÿ8À‘ù‡Å1
-c	java:S112î"FDefine and throw a dedicated exception instead of using a generic one.(¿èÎé8À‘ù‡Å1
-h	java:S112ô"FDefine and throw a dedicated exception instead of using a generic one.(…¯üãûÿÿÿÿ8Á‘ù‡Å1
-l
-java:S2095K"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¼Ú­í8š’ù‡Å1
+b	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(şáêœ8À‘ù‡Å1
+b	java:S112]"FDefine and throw a dedicated exception instead of using a generic one.(ßıñ8À‘ù‡Å1
+g	java:S112k"FDefine and throw a dedicated exception instead of using a generic one.(Ç ˜¨øÿÿÿÿ8À‘ù‡Å1
+b	java:S112{"FDefine and throw a dedicated exception instead of using a generic one.(Ö’—á8À‘ù‡Å1
+c	java:S112›"FDefine and throw a dedicated exception instead of using a generic one.(¾àéÅ8À‘ù‡Å1
+h	java:S112Ÿ"FDefine and throw a dedicated exception instead of using a generic one.(§¶»¤ÿÿÿÿÿ8À‘ù‡Å1
+h	java:S112¹"FDefine and throw a dedicated exception instead of using a generic one.(©Æõ–ùÿÿÿÿ8À‘ù‡Å1
+h	java:S112Ó"FDefine and throw a dedicated exception instead of using a generic one.(™µ’‘ùÿÿÿÿ8À‘ù‡Å1
+c	java:S112í"FDefine and throw a dedicated exception instead of using a generic one.(¿èÎé8À‘ù‡Å1
+h	java:S112ó"FDefine and throw a dedicated exception instead of using a generic one.(…¯üãûÿÿÿÿ8Á‘ù‡Å1
 q
-java:S2095u"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(·È·şùÿÿÿÿ8š’ù‡Å1
+java:S2095t"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(·È·şùÿÿÿÿ8š’ù‡Å1
+l
+java:S2095J"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¼Ú­í8š’ù‡Å1
 v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(»Õ ‚8›’ù‡Å1
 {	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Î’Ï‡ÿÿÿÿÿ8›’ù‡Å1
 X	java:S125"<This block of commented-out lines of code should be removed.(ãÖ¬§8Í†äˆÅ1
 X	java:S125"<This block of commented-out lines of code should be removed.(–ªÏÜ8Éü¬ŠÅ1
-V	java:S106Š"9Replace this use of System.out or System.err by a logger.(‡¨‘ù8°’ù‡Å1
+H	java:S106‰"+Replace this use of System.out by a logger.(‡¨‘ù8°’ù‡Å1

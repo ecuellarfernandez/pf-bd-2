@@ -8,11 +8,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrdenDeBusqueda {
-    private String id;
-    private String estado;
-    private String idAgente;
-    private String idSospechoso;
-    private String idInvestigacion;
+    private int id;
+    private int estado;
+    private int idAgente;
+    private int idSospechoso;
+    private int idInvestigacion;
 
 
     @Override

@@ -8,7 +8,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class CrimenDaoMySql extends CrimenDao {
-    private static final String PROCEDURE_INSERT = "{CALL insert_crimen(?, ?, ?, ?)}";
+    private static final String INSERT_PROCEDURE = "CALL insert_crimen(?, ?, ?, ?)";
     private static final String INSERT_QUERY = "INSERT INTO crimen (descripcion, fecha, hora, idCategoria) VALUES (?, ?, ?, ?)";
     private static final String UPDATE_QUERY = "UPDATE crimen SET descripcion = ?, fecha = ?, hora = ?, idCategoria = ? WHERE idCrimen = ?";
     private static final String DELETE_QUERY = "DELETE FROM crimen WHERE idCrimen = ?";
@@ -16,32 +16,11 @@ public class CrimenDaoMySql extends CrimenDao {
     private static final String SELECT_ALL_QUERY = "SELECT * FROM crimen";
 
     @Override
-    public void pro_insert(Crimen obj) throws Exception {
-        try {
-            Conexion objConexion = Conexion.getOrCreate();
-            Connection conn = objConexion.conectarPostgreSQL();
-            CallableStatement stmt = conn.prepareCall(PROCEDURE_INSERT);
-
-            stmt.setString(1, obj.getDescripcion());
-            stmt.setDate(2, obj.getFecha());
-            stmt.setTime(3, obj.getHora());
-            stmt.setString(4, obj.getIdCategoria());
-
-            stmt.executeUpdate();
-            stmt.close();
-            objConexion.desconectar();
-        } catch (SQLException e) {
-            e.printStackTrace();
-            throw new Exception("Error al insertar crimen en la base de datos");
-        }
-    }
-
-    @Override
     public void insert(Crimen obj) throws Exception {
         try {
             Conexion objConexion = Conexion.getOrCreate();
             Connection conn = objConexion.conectarPostgreSQL();
-            PreparedStatement stmt = conn.prepareStatement(INSERT_QUERY);
+            PreparedStatement stmt = conn.prepareStatement(INSERT_PROCEDURE);
 
             stmt.setString(1, obj.getDescripcion());
             stmt.setDate(2, obj.getFecha());

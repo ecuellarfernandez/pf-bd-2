@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class SospechosoTieneCrimen{
-    private String id;
-    private String idCrimen;
-    private String idSospechoso;
+    private int id;
+    private int idCrimen;
+    private int idSospechoso;
 
 
     @Override

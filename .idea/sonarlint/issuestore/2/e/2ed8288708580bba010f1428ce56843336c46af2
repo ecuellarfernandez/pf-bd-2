@@ -1,11 +1,11 @@
 
-`	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(·Ü»¬ÿÿÿÿÿ
 `	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(·Ü»¬ÿÿÿÿÿ
 [	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(©·‘„
 `	java:S112b"FDefine and throw a dedicated exception instead of using a generic one.(é¨§¯úÿÿÿÿ
-j
-java:S2095"OUse try-with-resources or close this "CallableStatement" in a "finally" clause.(Î‡¡³üÿÿÿÿ
-e
-java:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(êÍªÎ
-e
-java:S2095:"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¼Ú­í
+q
+java:S2095)"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(×½¬ðøÿÿÿÿ8¦ÿ€¨Å1
+l
+java:S2095:"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¼Ú­í8§ÿ€¨Å1
+X	java:S125"<This block of commented-out lines of code should be removed.(É‘à†8´ÿ€¨Å1
+M
+java:S1068"0Remove this unused "INSERT_QUERY" private field.(¾Ÿ³¥8¶Þ…¨Å1

@@ -1,11 +1,9 @@
 
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(çÒ²–
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ç©±
+[	java:S112	"FDefine and throw a dedicated exception instead of using a generic one.(»û¸æ
 [	java:S112
-"FDefine and throw a dedicated exception instead of using a generic one.(Ç©±
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(»û¸æ
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(î´Æ
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(àéµÒ
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(è™ş¯
+"FDefine and throw a dedicated exception instead of using a generic one.(î´Æ
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(àéµÒ
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(è™ş¯
 †
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(è™ş¯
-c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÒ²–
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(è™ş¯

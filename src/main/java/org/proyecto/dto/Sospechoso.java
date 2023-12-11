@@ -9,8 +9,8 @@ import org.proyecto.dao.SospechosoDao;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Sospechoso {
-    private String id;
-    private String ciSospechoso;
+    private int id;
+    private int ciSospechoso;
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;

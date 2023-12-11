@@ -11,9 +11,9 @@ import java.sql.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class InvestigacionTieneTestigo {
-    private String id;
-    private String idInvestigacion;
-    private String idTestigo;
+    private int id;
+    private int idInvestigacion;
+    private int idTestigo;
     private String declaracion;
     private Date fecha;
 

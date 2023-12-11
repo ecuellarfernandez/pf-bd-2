@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Departamento {
-    private String id;
+    private int id;
     private String nombre;
     private String descripcion;
-    private String idAdministador;
+    private int idAdministador;
 
     @Override
     public String toString() {

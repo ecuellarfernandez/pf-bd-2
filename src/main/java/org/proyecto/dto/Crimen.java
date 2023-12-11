@@ -12,11 +12,11 @@ import java.sql.Time;
 @AllArgsConstructor
 
 public class Crimen {
-    private String id;
+    private int id;
     private String descripcion;
     private Date fecha;
     private Time hora;
-    private String idCategoria;
+    private int idCategoria;
 
 
     @Override

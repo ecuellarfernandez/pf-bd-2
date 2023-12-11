@@ -11,11 +11,11 @@ import java.sql.Date;
 @AllArgsConstructor
 
 public class Investigacion {
-    private String id;
+    private int id;
     private Date fechaInicio;
     private Date fechaFin;
-    private String idAgente;
-    private String idCrimen;
+    private int idAgente;
+    private int idCrimen;
 
     @Override
     public String toString() {

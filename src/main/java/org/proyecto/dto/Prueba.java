@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class Prueba {
-    private String id;
+    private int id;
     private String descripcion;
-    private String idCrimen;
+    private int idCrimen;
 
     @Override
     public String toString() {
